@@ -1,0 +1,258 @@
+/* Ejercicio_4 estilos*/
+
+title{
+	font-family:'Times New Roman',serif;
+	font-style:italic;
+}
+
+body{
+	margin:0; 
+	padding:0;
+	background-color:black;
+}
+
+/* Logo */
+#logo {
+	width: 260px;
+	padding: 10px;
+	height: auto;
+}
+
+/* Encabezado general */
+header {
+	background-color: rgba(214, 0, 85, 1);
+	display: flex;
+	align-items: center;
+	justify-content: space-between; /* separa izquierda y derecha */
+	padding: 0 20px;
+	height: auto;
+}
+
+/* Contenedor para logo y título */
+#logo-titulo {
+	display: flex;
+	align-items: center;
+}
+
+/* Navegación */
+nav {
+	display: flex;
+	gap: 20px;
+	background-color:black;
+	border-top:2px white solid;
+	border-bottom:2px white solid;
+	padding: 10px 20px;
+	height: auto;
+}
+
+/* Enlaces del navegador */
+#navegador a {
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 20px;
+	color: rgba(242, 198, 0, 1); /* Cambia el texto del nav a blanco */
+	font-family:arial;
+	border: 2px solid transparent;
+	padding: 5px;
+	transition: 0.3s;
+}
+
+
+/* Efecto hover */
+#navegador a:hover {
+	border-bottom: 2px solid white;
+}
+
+
+.alinear{
+	max-width: 800px;        /* Limita el ancho para que no se extienda demasiado */
+    margin: 100px auto;      /* Centra horizontalmente y separa del borde superior */
+    text-align: center;  
+}
+
+.articulo{
+	border:2px white solid;
+	border-radius:8px;
+}
+
+.juego {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row; /* asegura la dirección horizontal */
+	align-items: center;
+	overflow:hidden;
+}
+
+.info-imagen {
+  width: 300px;
+  text-align: center;
+  margin:0;
+}
+
+.info-imagen img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+
+
+.contenedor{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: auto;
+}
+
+.imagen{
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	height: auto;
+}
+
+.parrafo{
+	text-decoration: none;
+	font-size: 20px;
+	line-height: 1.6;
+	color:white;
+	text-align:left;
+}
+
+h2{
+	font-size:35px;
+	text-align:left;
+	color:rgba(214, 0, 85, 1);	
+	font-style:italic;
+}
+
+
+.musica {
+	background-color:rgba(242, 198, 0, 1);
+	border:2px white solid;
+	border-radius:8px;
+	display:flex;
+	align-items:center;
+	overflow:hidden;
+	gap:25px;
+	margin-top:20px;
+	margin:20px auto;
+}
+
+.musica img{
+	height:100%;
+	border-radius:8px;
+	object-fit:cover;
+}
+
+
+.texto-musica h1{
+	font-size:1.8em;
+	color:white;
+	margin:0;
+}
+
+.texto-musica p{
+	font-size:1.8em;
+	color:rgba(214, 0, 85, 1);
+	margin: 5px 0 0 0;
+	font-style:italic;
+}
+
+.musica img:hover{
+	transform:scale(1);
+	box-shadow: 0 0 20px rgba(214, 0, 85, 1);
+}
+
+
+.galeria {
+	display:grid;
+	grid-template-columns:repeat(auto-fit,minmax(250px, 1fr));
+	gap:15px;
+	margin-top:30px;
+}
+
+.galeria img{
+	width:100%;
+	aspect-ratio: 4 / 3; /* Relación fija */
+    object-fit: cover;   /* Mantiene proporciones y recorta si es necesario */
+	border-radius:10px;
+	transition:transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria img:hover {
+	transform:scale(1.05);
+	box-shadow: 0 0 20px rgba(214, 0, 85, 1);
+}
+
+  /* Lightbox funcional sin div */
+a.lightbox {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    text-align: center;
+}
+
+a.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+}
+
+a:target.lightbox {
+    display: flex;
+}
+
+a.lightbox::after {
+    content: '✖';
+	position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    text-decoration: none;
+}
+
+a.lightbox:hover::after {
+   color: #f05;
+}
+
+
+
+
+.imagen-tabla {
+	margin:0 auto;
+	border-collapse:collapse;
+	width:70%;
+	border:1px rgba(214, 0, 85, 1) solid;
+	border-collapse:collage;
+	text-align:center;
+}
+
+.imagen-tabla td{
+	vertical-align:middle;
+	border:2px white solid;
+	padding:10px;
+}
+
+
+.imagen-tabla img {
+      width:260px; /* Puedes ajustar el tamaño */
+      height: auto;
+	  display:block;
+    }
+
+footer{
+	display:flex;
+	width:100%;
+	height:auto;
+	border-top:2px white solid;
+	background-color:rgba(214, 0, 85, 1);
+}
